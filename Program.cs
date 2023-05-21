@@ -9,7 +9,13 @@ namespace structures
         static void Main(string[] args)
         {
             Console.WriteLine("kelime giriniz:");
-            string entry=Console.ReadLine();
+            try{
+                string entry=Console.ReadLine();
+            }
+            catch(FormatException e){
+                Console.WriteLine("Hatalı format !");
+            }
+            
             
             ReverseWrite(entry);
 
